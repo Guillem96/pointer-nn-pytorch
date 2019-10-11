@@ -296,7 +296,7 @@ def train(model, optimizer, epoch):
 
 Finally to train the model we run the following code.
 
-```pyhton
+```python
 ptr_net = PointerNetwork(Encoder(HIDDEN_SIZE), 
                          Decoder(HIDDEN_SIZE))
 
