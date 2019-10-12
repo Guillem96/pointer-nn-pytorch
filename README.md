@@ -23,7 +23,7 @@ $ p\left ( C^{P} \right|P; \theta ) = \prod_{I=0}^{m(P)} p \theta ( C_i | C_1 ..
 
 Ptr-NN solves problems such as sorting arrays using neural attention mechanism. It differs from other attentions because instead of using it as a mask to weight the encoder outputs it is used as a "C pointer" to select a member of the input.
 
-![Figure 1](img/figure-1.png)
+![Figure 1](https://raw.githubusercontent.com/Guillem96/pointer-nn-pytorch/master/img/figure-1.png)
 
 An encoding RNN converts the input sequence to a code (blue) that is fed to the decoder network (purple). At each step, the decoder network produces a vector that modulates a content-based attention mechanism over inputs. The output of the attention mechanism is a softmax distribution used to select one element of the input (Eq 2.).
 
@@ -87,7 +87,7 @@ Let's see an small output of our `data generator`.
 
 The paper [1] states that no extensive hyperparameter tuning has been done. So to keep things simple we will implement an `Encoder` with a single LSTM layer and a `Decoder` with an `Attention` layer and a single LSTM layer too. Both `Encoder` and `Decoder` will have a hidden size of 256. The accomplish our goal we will maximize log likelihood probability with Adam optimizer with the default learning rate set by PyTorch.
 
-![Figure 2](img/model-architecture.jpg)
+![Figure 2](https://raw.githubusercontent.com/Guillem96/pointer-nn-pytorch/master/img/model-architecture.jpg)
 <small class="legend">Figure 2: Seq2Seq model with attention. Similar to our Ptr-NN architecture</small>
 
 ### Encoder
